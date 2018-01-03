@@ -1,0 +1,19 @@
+.logo{
+	height: 110px;
+	background: #ff0;
+	width: 1195px;
+}
+.banner{
+	width: 1195px;
+	height: 485px;
+}
+.container{
+	width: 1190px;
+	border: 1px solid;
+	min-height: 1000px;
+	background: #f4f4f3;
+}
+.links{
+	height: 180px;
+	background: #ccc;
+}

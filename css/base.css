@@ -1,0 +1,55 @@
+/*重置样式*/
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, 
+legend, img, div,header,nav,footer,input,form,button,a{ 
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	 }	 
+h1, h2, h3, h4, h5, h6{font-weight: 100;}
+	 
+fieldset, img { border:none; }
+
+img{vertical-align: top;}
+
+em,i,strong,b{ font-style:normal; font-weight:normal; }
+
+ul, ol { list-style:none; } 
+
+a {text-decoration:none; color: #fff; }
+
+.ind{text-indent: 2em;}
+
+.noborder{border: none;}
+
+.floatL{float: left;}
+
+.floatR{float: right;}
+
+.auto{margin: 0 auto;}
+p,a{font-size: 12px;}
+/*header*/
+header{
+	height: 31px;
+	background-color: #fafafa;
+	border-bottom: 1px solid #f0f0f0; 
+}
+header .head{
+	width: 100%;
+	height: 31px;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+/*footer*/
+footer{
+	height: 134px;
+	background-color: #3a3939;
+}
+footer .foot{
+	/*width: 1299px;*/
+	width: 100%;
+	height: 200px;
+
+}

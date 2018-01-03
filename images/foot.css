@@ -1,0 +1,270 @@
+#faq {
+	width: 100%;
+	overflow: hidden;
+	background-color: #fff;
+	margin-top: -20px;
+}
+
+#faq ul {
+	font-size: 0;
+	white-space: nowrap;
+	padding: 10px 0px;
+	margin-top: 0px;
+	white-space: nowrap;
+	width: 1009px;
+	float: left;
+	margin-left: 0px;
+	border-right:1px solid #eee;
+	overflow: hidden;
+	margin: 10px 0;
+}
+
+#faq li {
+	width: 100px;
+	height: 140px;
+	font-size: 14px;
+	margin-left: 70px;
+	margin-right: 45px;
+	letter-spacing: normal;
+	word-spacing: normal;
+	display: inline-block;
+}
+.yingcang {
+	display: none;
+}
+
+#faq dl {
+	width: 140px;
+	height: 140px;
+	display: block;
+	margin: 0 auto;
+}
+
+#faq dl.s1 dt,
+#faq dl.s2 dt,
+#faq dl.s3 dt,
+#faq dl.s4 dt {
+	width: 100px;
+}
+
+#faq dl dt {
+	font: 14px/20px "microsoft yahei";
+	color: #666666;
+	padding: 0px;
+	margin: 0px;
+	margin-bottom: 8px;
+}
+
+#faq dl dd {
+	font: 12px/22px "microsoft yahei";
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	display: block;
+	clear: both;
+	overflow: hidden;
+	padding: 0px;
+}
+
+#faq dl dt a {
+	font-size: 14px;
+}
+
+#faq dl dd i {
+	font-size: 0;
+	line-height: 0;
+	background: url(../images/top_bg.png) no-repeat -80px -10px;
+	vertical-align: middle;
+	display: inline-block;
+	width: 3px;
+	height: 3px;
+	margin-right: 5px;
+}
+
+#faq dl dd a {
+	color: #8c8c8c !important;
+}
+#faq dl dd a:hover{
+	color: #ff3030 !important;
+}
+#footer {
+	font-size: 12px !important;
+	text-align: center;
+	width: 100%;
+	height: 134px;
+	padding-bottom: 0px !important;
+	overflow: hidden;
+	background-color: #fff;
+}
+#footer .vol {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-weight: 600;
+	font-style: oblique;
+	font-size: 12px;
+}
+
+#footer .vol .b {
+	color: #00F;
+}
+
+#footer .vol .o {
+	color: #F60;
+}
+
+#footer .vol em {
+	font-family: Tahoma, Georgia, Arial;
+	font-weight: 600;
+	font-style: italic;
+	color: #000;
+	margin-left: 2px;
+}
+
+#footer.wrapper {
+	background-color: #3a3939;
+	width: 100%;
+	margin: 0 auto;
+}
+
+ul#rolltxt {
+	margin-left: 18px;
+	padding: 0;
+	margin-top: 1px
+}
+
+#faq .tel {
+	width: 169px;
+	height: 140px;
+	border-left:1px solid #eee;
+	padding: 10px 0px;
+	padding-left: 10px;
+	margin-top: 10px;
+	float: left;
+}
+
+.tel p {
+	color: #333;
+	font-size: 14px;
+	line-height: 23px;
+}
+
+.bang {
+	width: 110px;
+	height: 19px;
+	border: 0px solid red;
+}
+
+.dian {
+	width: 110px;
+	height: 19px;
+	border: 0px solid red;
+}
+
+.zhi {
+	width: 110px;
+	height: 19px;
+	border: 0px solid red;
+}
+
+.shou {
+	width: 110px;
+	height: 19px;
+	border: 0px solid red;
+}
+
+.ke {
+	width: 110px;
+	height: 19px;
+	border: 0px solid red;
+}
+
+.guan {
+	width: 110px;
+	height: 19px;
+	border: 0px solid red;
+}
+.foot{
+	width: 1200px;
+	height: 126px;
+	margin: 0px auto;
+}
+.foot .erweima{
+	width: 120px;
+	height: 96px;
+	margin-top: 11px;
+	float: left;
+}
+.foot .erweima img{
+	width: 138px;
+	height: 114px;
+	margin: 0px;
+}
+.foot p {
+	color: #fff;
+}
+.foot-center{
+	width: 942px;
+	float: left;
+	margin: 0px  auto;
+}
+#footer p {
+	word-spacing: 5px;
+	color: #fff;
+	padding: 10px 0;
+}
+#footer span img {display: inline-block;}
+#footer a {
+	color: #fff;
+	text-decoration: none;
+}
+#footer a:hover {
+	text-decoration: underline;
+}
+#footer span{
+	color: #fff;
+}
+.fl {
+	float: left;
+}
+
+.tel {
+	padding: 0px;
+	margin: 0px;
+}
+
+.tel-1,.tel-2,.tel-3 {
+	width: 170px;
+	padding: 0px;
+	margin: 0px;
+	background: url(../images/foot9.jpg) no-repeat right 23px;
+}
+
+#faq dl dd a {
+	color: #000;
+	cursor: auto;
+	text-decoration: none;
+	font-size: 12px;
+}
+
+.head-ad {
+	width: 100%;
+	height: 120px;
+	padding: 0;
+	background-color: #f5f5f5;
+	display: block;
+}
+
+.head-ad img {
+	max-width: 1200px;
+	height: 100px;
+	display: block;
+	margin: 0px auto;
+	padding: 0;
+}
+
+#rightArrow {
+	width: 50px;
+	height: 50px;
+	position: fixed;
+	top: 16%;
+	left: 1.5%;
+	z-index: 999999;
+}

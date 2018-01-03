@@ -1,0 +1,291 @@
+﻿
+/*----------------------------------盲购通  begin--------------------------------------*/
+$(function() {
+	//scroll news
+	var scrnews = $("#warp_div_big_pic_right");
+	//获取序号元素
+	var liNum = $("#warp_div_big_pic_right");
+	// console.log(liNum)
+	var newst = setInterval(scro, 4500);
+	scrnews.hover(function() {
+		clearInterval(newst);
+		
+	}, function() {
+		newst = setInterval(scro, 4500);
+	})
+
+	//点击右方向按钮
+	$('.warp_div_big_right_right').bind('click', function() {
+		//将第一张图片切换到后面
+		scrnews.children("li:first").appendTo(scrnews);
+	});
+
+	//点击左方向按钮
+	$('.warp_div_big_right_left').bind('click', function() {
+		clearInterval(newst);
+		//将第一张图片切换到前面
+		scrnews.children("li:last").prependTo(scrnews);
+	});
+
+	var i = 0;
+
+	function scro() {
+		scrnews.animate({
+			left: -240
+		}, 2000, function() {
+			$(this).children("li:first").appendTo(this);
+			$(this).css("left", 0);
+		})
+	}
+
+	//序号变化
+	liNum.removeClass('activecc');
+	liNum.eq(i).addClass('activecc');
+	i++;
+	if(i > 3) {
+		i = 0;
+	}
+})
+/*----------------------------------盲购通  end--------------------------------------*/
+
+
+/*----------------------------------首页banner  begin--------------------------------------*/
+$(document).ready(function() {
+
+	time = setInterval(home_banner, 3500);
+
+	n = 0;
+
+	function home_banner() {
+		$(".home_banner li").css({
+			'display': 'none'
+		});
+		$(".home_banner li:eq(" + n + ")").css({
+			'display': 'block'
+		});
+		if(n >= 4) {
+			n = 0;
+		} else {
+			n++;
+		}
+	}
+	$(".home_banner").each(function(index) {
+		$('.home_banner_left').click(function() {
+			clearInterval(time);
+			$(".home_banner li").css({
+				'display': 'none'
+			});
+			$(".home_banner li:eq(" + index + ")").css({
+				'display': 'block'
+			});
+			index = n - 1;
+			if(n < 0) {
+				n = 4;
+			} else {
+				n--;
+			}
+			if(index < 0) {
+				index = 4;
+				n = 4;
+			}
+			time = setInterval(home_banner, 3500);
+		});
+		$('.home_banner_right').click(function() {
+			clearInterval(time);
+			$(".home_banner li").css({
+				'display': 'none'
+			});
+			$(".home_banner li:eq(" + index + ")").css({
+				'display': 'block'
+			});
+			index = n + 1;
+			if(n >= 4) {
+				n = 0;
+			} else {
+				n++;
+			}
+			if(index > 4) {
+				index = 0;
+				n = 0;
+			}
+			time = setInterval(home_banner, 3500);
+		});
+	});
+
+	$(".home_banner_div").mouseover(function() {
+		$(".home_banner_span1").css("display", "block")
+	});
+	$(".home_banner_div").mouseout(function() {
+		$(".home_banner_span1").css("display", "none")
+	});
+
+});
+
+/*----------------------------------首页banner  end--------------------------------------*/
+
+/*----------------------------------首页 floor楼层左侧栏begin--------------------------------------*/
+$(function() {
+	// @ 给窗口加滚动条事件
+	$(window).scroll(function() {
+		// 获得窗口滚动上去的距离
+		var ling = $(document).scrollTop();
+		var dis1 = parseFloat($("#floor-box1").offset().top) - 270,
+			dis2 = parseFloat($("#floor-box2").offset().top) - 270,
+			dis3 = parseFloat($("#floor-box3").offset().top) - 270,
+			dis4 = parseFloat($("#floor-box4").offset().top) - 270,
+			dis5 = parseFloat($("#floor-box5").offset().top) - 270,
+			dis6 = parseFloat($("#floor-box6").offset().top) - 270,
+			dis7 = parseFloat($("#floor-box7").offset().top) - 270,
+			dis8 = parseFloat($("#floor-box8").offset().top) - 270,
+			dis9 = parseFloat($("#floor-box9").offset().top) - 270,
+			dis10 = parseFloat($("#floor-box10").offset().top) - 270,
+			dis11 = parseFloat($("#floor-box11").offset().top) - 270,
+			dis12 = parseFloat($("#floor-box12").offset().top) - 270,
+			dis13 = parseFloat($("#floor13").offset().top)-270;
+		// 在标题栏显示滚动的距离
+		//      document.title = ling;
+		//浏览器定位搜索框js
+		if(ling > 800) {
+			$(".fix_search").show();
+		} else {
+			$(".fix_search").hide();
+		}
+		// 如果滚动距离大于1800的时候让滚动框出来
+		if(ling > dis1) {
+			$('#box').show();
+		}
+		if(dis1 > ling) {
+			// 让第一层的数字隐藏，文字显示，让其他兄弟元素的li数字显示，文字隐藏
+			$('#box').hide();
+		} else if(dis1 < ling && ling < dis2) {
+			// 让第一层的数字隐藏，文字显示，让其他兄弟元素的li数字显示，文字隐藏
+			$('#box ul li').eq(0).addClass("i-hover").siblings().removeClass("i-hover");
+		} else if(ling < dis3) {
+			$('#box ul li').eq(1).addClass("i-hover").siblings().removeClass("i-hover");
+		} else if(ling < dis4) {
+			$('#box ul li').eq(2).addClass("i-hover").siblings().removeClass("i-hover");
+		} else if(ling < dis5) {
+			$('#box ul li').eq(3).addClass("i-hover").siblings().removeClass("i-hover");
+		} else if(ling < dis6) {
+			$('#box ul li').eq(4).addClass("i-hover").siblings().removeClass("i-hover");
+		} else if(ling < dis7) {
+			$('#box ul li').eq(5).addClass("i-hover").siblings().removeClass("i-hover");
+		} else if(ling < dis8) {
+			$('#box ul li').eq(6).addClass("i-hover").siblings().removeClass("i-hover");
+		} else if(ling < dis9) {
+			$('#box ul li').eq(7).addClass("i-hover").siblings().removeClass("i-hover");
+		} else if(ling < dis10) {
+			$('#box ul li').eq(8).addClass("i-hover").siblings().removeClass("i-hover");
+		} else if(ling < dis11) {
+			$('#box ul li').eq(9).addClass("i-hover").siblings().removeClass("i-hover");
+		} else if(ling < dis12) {
+			$('#box ul li').eq(10).addClass("i-hover").siblings().removeClass("i-hover");
+		} else if(ling < dis13) {
+			$('#box ul li').eq(11).addClass("i-hover").siblings().removeClass("i-hover");
+		} else if(ling > dis13) {
+			$('#box').hide();
+		}
+	});
+})
+
+$(document).ready(function() {
+	$(".word").click(function() {
+		$("html, body").animate({
+			scrollTop: $($(this).attr("href")).offset().top - 75 + "px"
+		}, {
+			duration: 500,
+			easing: "swing"
+		});
+		return false;
+	});
+
+});
+/*----------------------------------首页 floor楼层左侧栏end--------------------------------------*/
+
+
+/*----------------------------------首页右侧登录begin--------------------------------------*/
+$(document).ready(function(){
+	$(".hot-list li").mouseover(function() {
+		$(this).addClass("active").siblings().removeClass("active");
+		var $index = $(this).index();
+		$(".index-hot-news ul").eq($index).css("display", "block").siblings().css("display", "none");
+	});
+});
+/*----------------------------------首页右侧登录end--------------------------------------*/
+
+
+
+
+$(document).ready(function() {
+	$(".cm-box-left .top li").click(function() {
+		$(this).addClass("top-hover").siblings().removeClass("top-hover");
+		var $index = $(this).index();
+		$(".bottom ul").eq($index).css("display", "block").siblings().css("display", "none");
+	});
+});
+
+//品牌之路 begin
+$(function(){
+	var win=$(".cm-box-right");
+	var links=$(".cm-box-right .top ul li");
+	var float=$(".cm-box-right .top .float");
+	var divs=$(".cm-box-right .bottom ul");
+	var num1=0;  //ǰݵ±
+	var num2=0;
+	win.hover(function(){
+		$(".cur-left,.cur-right").css("display","block");
+	},function(){
+		$(".cur-left,.cur-right").css("display","none");
+	});
+	$(".cur-left").click(function(){
+		divs.finish();
+		float.stop(true);
+		var temp=num1;
+		num1--;
+		if(num1==-1){
+			num1=4;
+		}
+		divs.eq(num1).css("left",-578).animate({left:0});
+		divs.eq(temp).animate({left:578});
+		float.animate({left:links.eq(num1).position().left})
+	});
+	$(".cur-right").click(function(){
+		divs.finish();
+		float.stop(true);
+		var temp=num1;
+		num1++;
+		if(num1==5){
+			num1=0;
+		}
+		divs.eq(num1).css("left",578).animate({left:0});
+		divs.eq(temp).animate({left:-578});
+		float.animate({left:links.eq(num1).position().left})
+	});
+	links.hover(function(){
+		//
+		divs.finish();
+		float.stop(true);
+		var that=$(this);
+		var lefts=$(this).position().left;
+		float.animate({left:lefts},function(){
+		})
+		//
+		//ݱ仯
+		var index=$(this).index(".cm-box-right .top ul li");
+		num2=index;
+		if(num1==num2){
+			return;
+		}else if(num1<num2){
+			divs.eq(num2).css("left",-578).animate({left:0});
+			divs.eq(num1).animate({left:578});
+		}else if(num1>num2){
+			divs.eq(num2).css("left",578).animate({left:0});
+			divs.eq(num1).animate({left:-578});
+		}
+		num1=num2;
+		num2="";
+	},function(){
+
+	})
+})
+//品牌之路 end
